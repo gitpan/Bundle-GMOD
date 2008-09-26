@@ -1,6 +1,6 @@
 package Bundle::GMOD;
 
-our $VERSION = '0.003';
+our $VERSION = '1.0';
 
 1;
 
@@ -18,34 +18,45 @@ Bundle::GMOD - Prerequisites for GMOD applications
 
 =head1 CONTENTS
 
-Apache::Session                           - gmod-web
-Bundle::BioPerl                           - chado, gbrowse
-CGI 2.56                                  - gbrowse
-Class::DBI 0.95                           - chado, gmod-web
-Class::DBI::ConceptSearch 0.031           - gmod-web
-Class::DBI::Pager                         - chado, gmod-web
-Class::DBI::Pg 0.02                       - chado, gmod-web
-Class::DBI::View 0.04                     - chado, gmod-web
-Class::MakeMethods::Emulator::MethodMaker - gmod-web
-DBI                                       - gbrowse, chado, gmod-web
-DBD::Pg                                   - gbrowse, chado, gmod-web
-Digest::MD5                               - gbrowse
-GD 2.07                                   - gbrowse
-GD::SVG                                   - gbrowse
-Log::Log4perl 0.39                        - chado, gmod-web
-LWP                                       - chado (installation only)
-Math::Derivative                          - bioperl
-Module::Build                             - chado (installation only)
-Math::Spline                              - bioperl
-SQL::Translator 0.04                      - gmod-web (this is a turnkey prereq, may not be necessary for prebuilt turnkey site)
-Statistics::Descriptive                   - bioperl
-SVG::Graph                                - bioperl
-Template 2.10                             - chado, gmod-web
-Term::ProgressBar 2.06                    - chado
-Text::Shellwords                          - gbrowse
-Tree::DAG_Node                            - bioperl
-XML::Simple                               - chado (installation only?)
-XML::LibXML 1.56                          - gmod-web
+URI::Escape
+Pod::Usage
+Config::General
+DBI                     - gbrowse, chado
+DBD::Pg                 - gbrowse, chado
+Digest::MD5
+Module::Build           - chado (installation only)
+Class::DBI              - chado
+Class::DBI::Pg          - chado
+Class::DBI::Pager       - chado
+Class::DBI::View        - chado
+XML::Simple             - chado (installation only?)
+LWP                     - chado (installation only)
+Template                - chado
+Log::Log4perl           - chado
+XML::Parser::PerlSAX	- XORT, Apollo
+XML::DOM		- XORT, Apollo
+File::Path
+Text::Tabs
+File::Spec
+XML::Writer             - SOI
+Graph                   - Chaos
+DBIx::DBStag            - chado, ontology loader
+GO::Parser              - chado, ontology loader
+XML::LibXSLT            - chaos
+Ima::DBI                - SGN ontology loader
+Class::MethodMaker      - SGN ontology loader
+URI                     - SGN ontology loader
+LWP::Simple             - SGN ontology loader
+XML::Twig               - SGN ontology loader
+Tie::UrlEncoder         - SGN ontology loader
+HTML::TreeBuilder       - SGN ontology loader
+Time::HiRes             - SGN ontology loader
+File::NFSLock           - SGN ontology loader
+Class::Data::Inheritable - SGN ontology loader
+IO::Dir                 - chado install util
+Text::Wrap              - snp2gff?
+
+
 
 =head1 DESCRIPTION
 
@@ -57,7 +68,7 @@ on it.  Other modules may be required for other components of GMOD.
 
 =head1 AUTHOR
 
-Allen Day allenday@ucla.edu, Scott Cain cain@cshl.org
+Scott Cain scain@cpan.org
 
 =head1 LINCENSE
 
